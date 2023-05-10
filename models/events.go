@@ -8,7 +8,7 @@ type Event struct {
 	EventOrganiser string
 	OrganiserEmail string
 	Venue string
-	EventDateate uint64
+	EventDate uint64
 	Price uint16
 	SeatsAvailable uint64
 	SeatsBooked uint64
