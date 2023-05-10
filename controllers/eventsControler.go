@@ -43,3 +43,9 @@ func GetEvent (c *gin.Context) {
 	initializers.DB.First(&event, id)
 	c.JSON(http.StatusOK, gin.H{"event": event})
 }
+
+func GetEventByDate (c *gin.Context) {}
+
+func GetEventVenue (c *gin.Context) {}
+
+func GetEventByOrganiser (c *gin.Context) {}
