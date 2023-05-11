@@ -6,6 +6,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"gorm.io/gorm"
 )
 
 func CreateEvent(c *gin.Context) {
@@ -44,8 +45,16 @@ func GetEvent (c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"event": event})
 }
 
-func GetEventByDate (c *gin.Context) {}
+func GetEventByDate (c *gin.Context) {
 
-func GetEventVenue (c *gin.Context) {}
+}
+
+func GetEventVenue (c *gin.Context) {
+	venue:= c.Query("venue")
+	var events []gorm.Model
+	initializers.DB.Find(&events, "venue = ?", venue)
+
+
+}
 
 func GetEventByOrganiser (c *gin.Context) {}
